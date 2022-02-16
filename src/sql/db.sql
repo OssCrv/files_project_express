@@ -1,0 +1,15 @@
+DROP DATABASE IF EXISTS files_app;
+
+CREATE DATABASE IF NOT EXISTS files_app;
+
+USE files_app;
+
+CREATE TABLE IF NOT EXISTS files(
+    id_file INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    file VARCHAR(50)
+);
+
+
+INSERT INTO files(file) VALUES ("Archivo 1");
+
+SELECT * FROM files;
