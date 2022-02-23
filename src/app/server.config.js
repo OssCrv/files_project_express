@@ -28,7 +28,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/resources', express.static(path.join(__dirname, '../public')));
 
 
-app.use('/', indexRouter);
 
 app.use(session({
     secret: 'secret',
@@ -36,5 +35,7 @@ app.use(session({
     saveUninitialized: true,
     cookie: { secure: true }
 }));
+
+app.use('/', indexRouter);
 
 module.exports = app;
